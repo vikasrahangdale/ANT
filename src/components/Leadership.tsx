@@ -2,12 +2,6 @@ import { motion } from "framer-motion";
 import { Briefcase, Award, Users, Target, Star, Sparkles, ArrowRight, X } from "lucide-react";
 import { useState } from "react";
 
-// Import your leadership images
-// import apoorvImage from ".apoorv.jpg";
-// import rajendraImage from "../assets/leaders/rajendra.jpg";
-// import shrutiImage from "../assets/leaders/shruti.jpg";
-// import divyaImage from "../assets/leaders/divya.jpg";
-
 const Leadership = () => {
   const [selectedLeader, setSelectedLeader] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -167,7 +161,7 @@ Under her leadership, Attractive Group has been recognized for its commitment to
       y: 0,
       transition: {
         duration: 0.6,
-        ease: "easeOut"
+        ease: "easeInOut"
       }
     }
   };
@@ -224,8 +218,6 @@ Under her leadership, Attractive Group has been recognized for its commitment to
             </p>
           </motion.div>
 
-       
-
           {/* Leader Cards with Images */}
           <motion.div
             variants={containerVariants}
@@ -248,11 +240,9 @@ Under her leadership, Attractive Group has been recognized for its commitment to
                   
                   {/* Leader Image */}
                   <div className="relative h-48 overflow-hidden">
-                    <img
-                      src=""
-                      alt=""
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
+                    <div className="w-full h-full bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
+                      <div className="text-gray-500">Image Placeholder</div>
+                    </div>
                     <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
                     
                     {/* Experience Badge */}
@@ -320,11 +310,9 @@ Under her leadership, Attractive Group has been recognized for its commitment to
           >
             {/* Modal Header */}
             <div className="relative">
-              <img
-                src=""
-                alt=""
-                className="w-full h-64 object-cover"
-              />
+              <div className="w-full h-64 bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
+                <div className="text-gray-500">Image Placeholder</div>
+              </div>
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
               
               <button
