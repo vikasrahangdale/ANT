@@ -321,8 +321,8 @@ Under her leadership, Attractive Group has been recognized for its commitment to
             {/* Modal Header */}
             <div className="relative">
               <img
-                src={selectedLeader.image}
-                alt={selectedLeader.name}
+                src=""
+                alt=""
                 className="w-full h-64 object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
