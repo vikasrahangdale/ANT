@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { Factory, ShoppingBag, Globe, Car, ArrowRight, Users, Target, Award, Sparkles } from "lucide-react";
 
 const Business = () => {
@@ -72,29 +71,6 @@ const Business = () => {
     { icon: Award, value: "43+", label: "Years Experience", color: "bg-purple-600" },
   ];
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2
-      }
-    }
-  };
-
- const itemVariants = {
-  hidden: { opacity: 0, y: 30 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.6,
-      ease: [0.25, 0.1, 0.25, 1], // ✔ FIXED – cubic bezier instead of string
-    }
-  }
-};
-
-
   return (
     <section
       id="business"
@@ -106,25 +82,13 @@ const Business = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Header Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="inline-flex items-center gap-3 px-6 py-3 bg-white rounded-full border border-gray-200 shadow-lg mb-8"
-          >
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center gap-3 px-6 py-3 bg-white rounded-full border border-gray-200 shadow-lg mb-8">
             <Sparkles className="w-4 h-4 text-red-600" />
             <span className="text-sm font-semibold text-gray-700 tracking-wider">
               OUR BUSINESS DIVISIONS
             </span>
-          </motion.div>
+          </div>
           
           <h2 className="text-4xl md:text-6xl font-black text-gray-900 mb-6">
             Our <span className="bg-gradient-to-r from-red-600 to-orange-600 bg-clip-text text-transparent">Business</span>
@@ -132,24 +96,17 @@ const Business = () => {
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Diversified excellence across automotive manufacturing, retail, and global exports
           </p>
-        </motion.div>
-
-  
+        </div>
 
         {/* Manufacturing Hero Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="mb-20"
-        >
+        <div className="mb-20">
           <div className="relative rounded-3xl overflow-hidden shadow-2xl group">
-            <img
-              src=""
-              alt="Manufacturing Facility"
-              className="w-full h-[500px] object-cover group-hover:scale-105 transition-transform duration-700"
-            />
+            <div className="w-full h-[500px] bg-gradient-to-br from-gray-800 to-gray-900">
+              {/* Manufacturing facility placeholder */}
+              <div className="w-full h-full flex items-center justify-center">
+                <Factory className="w-32 h-32 text-gray-300" />
+              </div>
+            </div>
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
             <div className="absolute bottom-0 left-0 right-0 p-8 md:p-12">
               <div className="max-w-2xl">
@@ -159,29 +116,16 @@ const Business = () => {
                 <p className="text-lg md:text-xl text-white/90 mb-6">
                   State-of-the-art facilities with cutting-edge technology and sustainable practices
                 </p>
-              
               </div>
             </div>
           </div>
-        </motion.div>
+        </div>
 
-        {/* Improved Division Cards */}
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="grid md:grid-cols-2 lg:grid-cols-2 gap-8"
-        >
+        {/* Division Cards */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
           {divisions.map((division, index) => (
-            <motion.div
+            <div
               key={index}
-              variants={itemVariants}
-              whileHover={{ 
-                scale: 1.03,
-                y: -8,
-                transition: { duration: 0.3 }
-              }}
               className="group"
             >
               <div className="relative bg-white rounded-2xl p-6 border border-gray-200 shadow-lg hover:shadow-2xl transition-all duration-500 h-full overflow-hidden">
@@ -215,31 +159,22 @@ const Business = () => {
                   {/* Services List */}
                   <div className="space-y-3">
                     {division.services.map((service, idx) => (
-                      <motion.div
+                      <div
                         key={idx}
-                        initial={{ opacity: 0, x: -10 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.4, delay: index * 0.1 + idx * 0.05 }}
-                        viewport={{ once: true }}
                         className="flex items-start gap-3"
                       >
                         <div className="w-2 h-2 rounded-full bg-red-500 mt-2 flex-shrink-0" />
                         <span className="text-sm text-gray-700 leading-relaxed font-medium">
                           {service}
                         </span>
-                      </motion.div>
+                      </div>
                     ))}
                   </div>
-
-                  {/* Explore Button */}
-                
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
-
-    
+        </div>
       </div>
     </section>
   );
