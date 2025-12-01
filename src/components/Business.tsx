@@ -104,7 +104,7 @@ const Business = () => {
             <div className="w-full h-[500px] bg-gradient-to-br from-gray-800 to-gray-900">
               {/* Manufacturing facility placeholder */}
               <div className="w-full h-full flex items-center justify-center">
-                <Factory className="w-32 h-32 text-gray-300" />
+               <img src="/tyre.jpg" className="w-full" alt="" />
               </div>
             </div>
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />

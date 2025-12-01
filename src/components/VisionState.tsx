@@ -26,12 +26,12 @@ const VisionState = () => {
 
           {/* Main Content */}
           <div className="flex-1">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold  mb-6">
               A Complete Hub for <br />  2W & 3W Tyres & Spare parts
             </h1>
             <p className="text-base md:text-lg text-gray-800 max-w-3xl leading-relaxed">
-              We are empowering millions around the globe through our portfolio of innovative and sustainable 
-              products. Powered by technology-driven excellence, we are shaping the future of mobility.
+            Attractive Auto Parts is a trusted name in the 2-wheeler and 3-wheeler industry, delivering high-quality tyres, tubes, and spare parts to customers across India and around the world.
+With a strong manufacturing base and a rapidly growing international presence, we proudly supply durable, performance-driven products that meet global standards.
             </p>
           </div>
         </div>

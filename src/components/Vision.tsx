@@ -55,9 +55,9 @@ const VisionHero = () => {
       style={{ clipPath: "polygon(0 0, 100% 15%, 100% 100%, 0 100%)" }}
     >
       <img
-         src="/vision-image1.png"
+         src="/vision-image2.png"
         alt="Image 2"
-        className="w-full h-full p-4 object-cover"
+        className="w-full h-full p-6 object-cover object-start"
       />
     </motion.div>
 
@@ -72,7 +72,7 @@ const VisionHero = () => {
       <img
       src="/vision-image3.png"
         alt="Image 3"
-        className="w-full h-full p-2 object-cover"
+        className="w-full  h-full p-2 object-cover"
       />
     </motion.div>
 

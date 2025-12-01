@@ -16,9 +16,8 @@ const Map = () => {
       </h2>
 
       <p className="text-gray-600 text-lg max-w-3xl mb-10">
-        Our world-class manufacturing facilities and R&D centres – 
-        spread across the world – are renowned Centres of Excellence 
-        and a beacon of sustainability measures.
+       Today, Attractive Auto Parts exports to multiple countries and continues to expand its footprint with a focus on quality engineering, timely delivery, and customer satisfaction.
+We are building a global network of partners who trust our products for their strength, longevity, and consistent performance on every terrain.
       </p>
 
       {/* Legend */}
