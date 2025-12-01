@@ -161,7 +161,7 @@ Under her leadership, Attractive Group has been recognized for its commitment to
       y: 0,
       transition: {
         duration: 0.6,
-        ease: "easeInOut"
+        ease: [0.43, 0.13, 0.23, 0.96]
       }
     }
   };
@@ -184,31 +184,17 @@ Under her leadership, Attractive Group has been recognized for its commitment to
         id="leadership"
         className="py-20 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden"
       >
-        {/* Background Elements */}
         <div className="absolute top-0 right-0 w-96 h-96 bg-red-500/5 rounded-full blur-3xl" />
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl" />
 
         <div className="container mx-auto px-4 relative z-10">
-          {/* Header Section */}
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="inline-flex items-center gap-3 px-6 py-3 bg-white rounded-full border border-gray-200 shadow-lg mb-8"
-            >
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-3 px-6 py-3 bg-white rounded-full border border-gray-200 shadow-lg mb-8">
               <Sparkles className="w-4 h-4 text-red-600" />
               <span className="text-sm font-semibold text-gray-700 tracking-wider">
                 MEET OUR LEADERS
               </span>
-            </motion.div>
+            </div>
             
             <h2 className="text-4xl md:text-6xl font-black text-gray-900 mb-6">
               Board of <span className="bg-gradient-to-r from-red-600 to-orange-600 bg-clip-text text-transparent">Directors</span>
@@ -216,55 +202,37 @@ Under her leadership, Attractive Group has been recognized for its commitment to
             <p className="text-xl text-gray-600 max-w-3xl mx-auto font-light">
               Visionary leadership driving innovation and excellence across global markets
             </p>
-          </motion.div>
+          </div>
 
-          {/* Leader Cards with Images */}
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="grid md:grid-cols-2 gap-8 mb-16"
-          >
+          <div className="grid md:grid-cols-2 gap-8 mb-16">
             {leaders.map((leader, index) => (
-              <motion.div
+              <div
                 key={leader.id}
-                variants={itemVariants}
-                whileHover={{ 
-                  y: -5,
-                  transition: { duration: 0.3 }
-                }}
                 className="group relative"
               >
                 <div className="relative bg-white rounded-2xl border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-500 h-full overflow-hidden">
                   
-                  {/* Leader Image */}
                   <div className="relative h-48 overflow-hidden">
                     <div className="w-full h-full bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
                       <div className="text-gray-500">Image Placeholder</div>
                     </div>
                     <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
                     
-                    {/* Experience Badge */}
                     <div className="absolute top-4 right-4 px-3 py-1 bg-red-600 text-white text-xs font-bold rounded-full shadow-lg">
                       {leader.experience} Experience
                     </div>
                   </div>
 
-                  {/* Content */}
                   <div className="p-6">
-                    {/* Name and Position */}
                     <div className="mb-4">
                       <h3 className="text-xl font-bold text-gray-900 mb-1">{leader.name}</h3>
                       <p className="text-red-600 font-semibold">{leader.position}</p>
                     </div>
 
-                    {/* Short Description */}
                     <p className="text-gray-600 text-sm mb-4 line-clamp-3">
                       {leader.description}
                     </p>
 
-                    {/* Expertise Tags */}
                     <div className="flex flex-wrap gap-2 mb-6">
                       {leader.expertise.slice(0, 3).map((skill, idx) => (
                         <span key={idx} className="px-3 py-1 bg-gray-100 text-gray-700 text-xs font-medium rounded-full">
@@ -273,47 +241,28 @@ Under her leadership, Attractive Group has been recognized for its commitment to
                       ))}
                     </div>
 
-                    {/* Read More Button */}
-                    <motion.button
+                    <button
                       onClick={() => handleReadMore(leader)}
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
                       className="w-full py-2 bg-red-50 text-red-600 font-semibold rounded-lg hover:bg-red-100 transition-all duration-300 flex items-center justify-center gap-2 text-sm"
                     >
                       Read More
                       <ArrowRight className="w-3 h-3" />
-                    </motion.button>
+                    </button>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
-          </motion.div>
+          </div>
         </div>
       </section>
 
-      {/* Modal/Popup for Full Leader Details */}
       {isModalOpen && selectedLeader && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm"
-          onClick={closeModal}
-        >
-          <motion.div
-            initial={{ scale: 0.9, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            exit={{ scale: 0.9, opacity: 0 }}
-            transition={{ type: "spring", damping: 25 }}
-            className="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-hidden shadow-2xl"
-            onClick={(e) => e.stopPropagation()}
-          >
-            {/* Modal Header */}
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm">
+          <div className="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-hidden shadow-2xl">
             <div className="relative">
               <div className="w-full h-64 bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
                 <div className="text-gray-500">Image Placeholder</div>
               </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
               
               <button
                 onClick={closeModal}
@@ -328,15 +277,12 @@ Under her leadership, Attractive Group has been recognized for its commitment to
               </div>
             </div>
 
-            {/* Modal Content */}
             <div className="p-6 md:p-8 overflow-y-auto max-h-[calc(90vh-16rem)]">
-              {/* Experience Badge */}
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-red-600 text-white font-bold rounded-full mb-6">
                 <Briefcase className="w-4 h-4" />
                 <span>{selectedLeader.experience} Experience</span>
               </div>
 
-              {/* Full Description */}
               <div className="mb-8">
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Profile Overview</h3>
                 <div className="text-gray-700 leading-relaxed whitespace-pre-line">
@@ -344,7 +290,6 @@ Under her leadership, Attractive Group has been recognized for its commitment to
                 </div>
               </div>
 
-              {/* Expertise Section */}
               <div className="mb-8">
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Areas of Expertise</h3>
                 <div className="flex flex-wrap gap-3">
@@ -356,7 +301,6 @@ Under her leadership, Attractive Group has been recognized for its commitment to
                 </div>
               </div>
 
-              {/* Achievements Section */}
               <div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Key Achievements</h3>
                 <ul className="space-y-3">
@@ -370,7 +314,6 @@ Under her leadership, Attractive Group has been recognized for its commitment to
               </div>
             </div>
 
-            {/* Modal Footer */}
             <div className="border-t border-gray-200 p-6">
               <div className="flex justify-end">
                 <button
@@ -381,8 +324,8 @@ Under her leadership, Attractive Group has been recognized for its commitment to
                 </button>
               </div>
             </div>
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
       )}
     </>
   );

@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { Factory, ShoppingBag, Globe, Car, ArrowRight, Users, Target, Award, Sparkles } from "lucide-react";
-import manufacturingImage from "../assets/manufacturing.jpg";
 
 const Business = () => {
   const divisions = [
@@ -83,17 +82,18 @@ const Business = () => {
     }
   };
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut"
-      }
+ const itemVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: [0.25, 0.1, 0.25, 1], // ✔ FIXED – cubic bezier instead of string
     }
-  };
+  }
+};
+
 
   return (
     <section
@@ -146,7 +146,7 @@ const Business = () => {
         >
           <div className="relative rounded-3xl overflow-hidden shadow-2xl group">
             <img
-              src={manufacturingImage}
+              src=""
               alt="Manufacturing Facility"
               className="w-full h-[500px] object-cover group-hover:scale-105 transition-transform duration-700"
             />
