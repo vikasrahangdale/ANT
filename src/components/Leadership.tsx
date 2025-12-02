@@ -180,7 +180,7 @@ Under her leadership, Attractive Group has been recognized for its commitment to
     <>
       <section
         id="leadership"
-        className="py-20 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden"
+        className="py-20 scroll-mt-24 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden"
       >
         <div className="absolute top-0 right-0 w-96 h-96 bg-red-500/5 rounded-full blur-3xl" />
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl" />
@@ -245,7 +245,7 @@ Under her leadership, Attractive Group has been recognized for its commitment to
                   </div>
 
                   {/* Short Description */}
-                  <p className="text-gray-600 text-sm mb-4 line-clamp-3 text-center">
+                  <p className="text-gray-600 text-sm font-semibold mb-4 line-clamp-3 text-center">
                     {leader.description}
                   </p>
 
@@ -410,24 +410,7 @@ Under her leadership, Attractive Group has been recognized for its commitment to
                   Under {selectedLeader.name.split(' ')[0]}'s leadership, Attractive Group has achieved remarkable growth and established itself as a global leader in the automotive sector. The strategic vision and commitment to excellence continue to drive innovation and sustainable development across all business verticals.
                 </p>
                 
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
-                  <div className="text-center p-4 bg-white rounded-lg border border-gray-200">
-                    <div className="text-2xl font-bold text-red-600 mb-1">80+</div>
-                    <div className="text-sm text-gray-600">Countries</div>
-                  </div>
-                  <div className="text-center p-4 bg-white rounded-lg border border-gray-200">
-                    <div className="text-2xl font-bold text-red-600 mb-1">50M+</div>
-                    <div className="text-sm text-gray-600">Customers</div>
-                  </div>
-                  <div className="text-center p-4 bg-white rounded-lg border border-gray-200">
-                    <div className="text-2xl font-bold text-red-600 mb-1">32+</div>
-                    <div className="text-sm text-gray-600">Years Legacy</div>
-                  </div>
-                  <div className="text-center p-4 bg-white rounded-lg border border-gray-200">
-                    <div className="text-2xl font-bold text-red-600 mb-1">4</div>
-                    <div className="text-sm text-gray-600">Business Verticals</div>
-                  </div>
-                </div>
+              
               </div>
 
               {/* Close Button at Bottom */}

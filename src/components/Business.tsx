@@ -74,7 +74,7 @@ const Business = () => {
   return (
     <section
       id="business"
-      className="py-20 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden"
+      className="py-20 scroll-mt-24 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden"
     >
       {/* Background Elements */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-red-500/5 rounded-full blur-3xl" />

@@ -8,7 +8,7 @@ const Map = () => {
   const handleZoomOut = () => setZoom((z) => Math.max(z - 0.2, 1));
 
   return (
-    <div className="py-20 container mx-auto px-6">
+    <div className="py-20 scroll-mt-24 container mx-auto px-6">
       
       {/* Title */}
       <h2 className="text-4xl md:text-5xl font-bold mb-6">

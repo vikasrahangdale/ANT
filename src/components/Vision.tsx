@@ -4,7 +4,7 @@ const VisionHero = () => {
   return (
     <section
      id="mission"
-     className="relative min-h-screen mt-10 bg-background flex items-center">
+     className="relative scroll-mt-24 min-h-screen mt-10 bg-background flex items-center">
       <div className="container mx-auto px-6 py-20">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left Side - Vision Statement */}

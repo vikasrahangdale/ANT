@@ -5,7 +5,7 @@ export default function CompanyOverview() {
   return (
     <div
       id="overview"
-      className="min-h-screen bg-gradient-to-b from-gray-50 to-white py-8 sm:py-12 md:py-16"
+      className="min-h-screen scroll-mt-24 bg-gradient-to-b from-gray-50 to-white py-8 sm:py-12 md:py-16"
     >
       {/* Breadcrumb - Hidden on mobile if not needed */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 sm:py-4">

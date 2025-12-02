@@ -2,7 +2,9 @@ import React from 'react';
 
 export default function TVSHeroSection() {
   return (
-    <div className="relative w-full min-h-[300px] sm:min-h-[350px] md:h-80 lg:h-96 bg-gradient-to-r from-blue-50 via-blue-100 to-blue-200 overflow-hidden">
+    <div
+    id='home'
+     className="relative scroll-mt-24 w-full min-h-[300px] sm:min-h-[350px] md:h-80 lg:h-96 bg-gradient-to-r from-blue-50 via-blue-100 to-blue-200 overflow-hidden">
       
       {/* Background Image with optimized overlay */}
       <div className="absolute inset-0 flex items-center justify-end">

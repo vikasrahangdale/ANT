@@ -1,7 +1,7 @@
 const VisionState = () => {
   return (
     <div 
-      className="min-h-screen relative overflow-hidden py-8 sm:py-10 md:py-12 px-4 sm:px-6 md:px-12 lg:px-24"
+      className="min-h-screen scroll-mt-24 relative overflow-hidden py-8 sm:py-10 md:py-12 px-4 sm:px-6 md:px-12 lg:px-24"
     >
       {/* Background Image with Blur Effect */}
       <div className="absolute inset-0 w-full h-full z-0">
